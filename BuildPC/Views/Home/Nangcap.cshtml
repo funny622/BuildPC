@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Nangcap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <script src="~/Scripts/FunctionNangcap.js"></script>
+</head>
+<body>
+    <h2>Nangcap</h2>
+    <h4>Nhap so tien dang co</h4>
+    <input type="text" id="Giatien">
+    <h4>Chon nhu cau can Update:</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="radio" value="CPU" name="nhucau" /><span> CPU</span>
+        </div>
+        <div class="col-md-4">
+            <input type="radio" value="GPU" name="nhucau" /><span> GPU</span>
+        </div>
+        <div class="col-md-4">
+            <input type="radio" value="RAM" name="nhucau" /><span> RAM</span>
+        </div>
+    </div>
+    <img resource="" />
+    <h4>Nhap cau hinh hien co</h4>
+    <input list="cpu" id="lstcpu" style="width:1000px" onclick="Test(this)" />
+    <datalist id="cpu" style="width:1000px"></datalist>
+    <input list="gpu" id="lstgpu" style="width:1000px" onclick="Test(this)" />
+    <datalist id="gpu" style="width:1000px"></datalist>
+    <input list="main" id="lstmain" style="width:1000px" onclick="Test(this)" />
+    <datalist id="main" style="width:1000px"></datalist>
+    <input list="ram" id="lstram" style="width:1000px" onclick="Test(this)" />
+    <datalist id="ram" style="width:1000px"></datalist>
+    <hr />
+    <input type="button" value="Update" onclick="Update()" />
+
+    <div id="disresult" style="visibility:hidden">
+        <div id="title"></div>
+        <div id="result"></div>
+    </div>
+</body>
+
+

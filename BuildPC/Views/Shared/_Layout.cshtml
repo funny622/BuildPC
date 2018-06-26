@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/styleweb.css" rel="stylesheet" />
+    <script src="~/Scripts/FunctionBuild2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/FunctionQuanly.js"></script>
+    <script src="~/Scripts/FunctionBuild1.js"></script>
+    <script src="~/Scripts/FunctionNangcap.js"></script>
+    <script src="~/Scripts/FunctionLogin.js"></script>
+    <script src="~/Scripts/FunctionCheck.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <ul class="nav">
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">Bảng xếp hạng</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Menu item 2.1</a></li>
+                    <li>
+                        <a href="#">Menu item 2.2</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Menu item 2.2.1</a></li>
+                            <li><a href="#">Menu item 2.2.2</a></li>
+                            <li><a href="#">Menu item 2.2.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu item 2.3</a></li>
+                    <li><a href="#">Menu item 2.4</a></li>
+                </ul>
+            </li>
+            <li><a href="@Url.Action("Build1","Home")">Xây dựng PC</a></li>
+            <li><a href="@Url.Action("Build2","Home")">Gợi ý cấu hình PC</a></li>
+            <li><a href="@Url.Action("Check","Home")">Kiểm tra tương thích</a></li>
+            <li><a href="@Url.Action("Nangcap","Home")">Hỗ trợ nâng cấp</a></li>
+            <li><a href="@Url.Action("Quanly","Home")">Quản lý</a></li>
+            <li><a href="@Url.Action("Login","Home")">Login</a></li>
+        </ul>
+
+
+
+
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Build2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/FunctionBuild2.js"></script>
+<script src="~/Scripts/jquery.priceformat.js"></script>
+<div>
+
+    </br>
+    </br>
+    <select id="nhapnhucau" onchange="chonloai()">
+        <option value="">----Select----</option>
+        <option value="GAME">GAME</option>
+        <option value="PHANMEM">PHẦN MỀM</option>
+    </select>
+    <select id="dispten">
+        <option>----Select----</option>
+    </select>
+    <input id="Giatien" type="text" pattern="[0-9]*" />
+    <button onclick="chongame()">Calculate</button>
+    @*<select id="hienthigpu" onchange="LoadCPU()"></select>
+        <select id="hienthicpu" onchange="LoadMainboard()"></select>
+        <select id="hienthimainboard" onchange="LoadRam()"></select>*@
+    @*<select id="hienthiram"></select>*@
+    <div id="hienthikhac1"></div>
+    <div id="hienthikhac2"></div>
+    <div id="hienthikhac3"></div>
+    <div id="hienthikhac4"></div>
+    <div id="hienthikhac5"></div>
+    <div id="hienthikhac6"></div>
+    <div id="hienthikhac7"></div>
+    <div id="hienthikhac8"></div>
+    <div id="hienthikhac9"></div>
+    <div id="hienthikhac10"></div>
+    <div id="hienthikhac"></div>
+    <div hidden>
+        <p>cpu</p><input type="text" id="cpu" />
+        <p>main</p><input type="text" id="main" />
+        <p>ram</p><input type="text" id="ram" />
+        <p>ram2</p><input type="text" id="ram2" />
+        <p>hdd</p><input type="text" id="hdd" />
+        <p>hdd2</p><input type="text" id="hdd2" />
+        <p>casepc</p><input type="text" id="casepc" />
+        <p>nguon</p><input type="text" id="nguon" />
+        <p>gpu</p><input type="text" id="gpu" />
+        <button onclick="Test()">Test</button>
+    </div>
+</div>
+
