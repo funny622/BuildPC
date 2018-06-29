@@ -39,12 +39,22 @@ function Test()
 
             success: function (data)
             {
-                alert(data.PhanQuyen);
+                //$('#result').html(data.PhanQuyen);
+                document.getElementById("menu").children[6].style.display = "none";
+                if (data.PhanQuyen === 'PQ0001')
+                    document.location.href = 'http://localhost:50895/Home/Quanly';
+                if (data.PhanQuyen === 'PQ0003')
+                    document.location.href = 'http://localhost:50895/Home';
+                
             },
+            //error: function (jqXHR) {
+            //    if (jqXHR.status == 401)
+            //        alert("Bạn nhập sai tên đăng nhập hoặc mật khẩu.");
+            //},
             complete: function (jqXHR)
             {
-                if (jqXHR.status === '401')
-                    alert("Bạn nhập sai tên đăng nhập hoặc mật khẩu.");
+                if (jqXHR.status == '401')
+                    $('#result').html('<p>Sai Username hay Password!</>')
             },
         });
 }

@@ -86,7 +86,7 @@ namespace BuildPC.Controllers
             if(user != null)
                 return Request.CreateResponse(HttpStatusCode.OK, user);
             else
-                return Request.CreateResponse(HttpStatusCode.BadRequest);
+                return Request.CreateResponse(HttpStatusCode.NotFound);
         }
     }
 }
