@@ -1,12 +1,11 @@
 ﻿
 @{
-    ViewBag.Title = "Quanly";
+    ViewBag.Title = "QLGPU";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
 <head>
-    <script src="~/Scripts/FunctionQuanly.js"></script>
+    <script src="~/Scripts/FunctionQLGPU.js"></script>
 </head>
 
 <body>
@@ -20,18 +19,19 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <p class="navbar-brand">
+                    <a class="navbar-brand" href="#">
                         QUẢN LÝ
-                    </p>
+
+                    </a>
                 </div>
 
                 <div class="notifications-wrapper">
                     <ul class="nav">
                         <li class="dropdown">
                             <ul class="list-group list-group-flush">
-                                <a href="@Url.Action("Quanly","Home")"><li class="list-group-item"> RAM</li></a>
+                                <a href="@Url.Action("QuanLy","Home")"><li class="list-group-item"> RAM</li></a>
                                 <a href="@Url.Action("QLCPU","Home")"><li class="list-group-item"> CPU</li></a>
-                                <a href="@Url.Action("QLGPU","Home")"><li class="list-group-item"> GPU</li></a>
+                                <a href="#"><li class="list-group-item"> GPU</li></a>
                                 <a href="@Url.Action("QLHDD","Home")"><li class="list-group-item"> HDD</li></a>
                                 <a href="@Url.Action("QLMainboard","Home")"><li class="list-group-item"> Mainboard</li></a>
                                 <a href="@Url.Action("QLCasePC","Home")"><li class="list-group-item"> CasePC</li></a>
@@ -68,17 +68,20 @@
                                     <table id="mytable" class="table table-bordred table-striped">
 
                                         <thead>
-                                            <th>Model</th>
-                                            <th>LoaiRam</th>
-                                            <th>TocDoBus</th>
-                                            <th>DungLuong</th>
                                             <th>HangSX</th>
-                                            <th>Giaban</th>
+                                            <th>HangChipset</th>
+                                            <th>Model</th>
+                                            <th>VGA</th>
+                                            <th>PCI</th>
+                                            <th>BoNho</th>
+                                            <th>LoaiRam</th>
+                                            <th>DienNang</th>
                                             <th>Diem</th>
                                             <th>DanhGia</th>
-                                            <th>Ảnh</th>
+                                            <th>Giaban</th>
+                                            <th>URL</th>
                                         </thead>
-                                        <tbody id="dispRam" name="ram"></tbody>
+                                        <tbody id="dispgpu" name="gpu"></tbody>
                                     </table>
                                     <button class="btn btn-success btn-lg" id="create" onclick="Them()">+Thêm sản phẩm</button>
 
@@ -127,7 +130,6 @@
         </script>
     }
 </body>
-
 
 
 

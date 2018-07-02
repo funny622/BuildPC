@@ -1,10 +1,11 @@
 ﻿
 @{
-    ViewBag.Title = "Check";
+    ViewBag.Title = "CheckCM";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Kiểm tra PC</h2>
-<script src="~/Scripts/FunctionCheck.js"></script>
+<script src="~/Scripts/FunctionCheckCM.js"></script>
+<h2>Kiểm tra CPU và Mainboard</h2>
+
 <div class="notifications-wrapper">
     <ul class="nav">
         <li class="dropdown">
@@ -26,14 +27,7 @@
 <p>CPU:</p>
 <input list="lstcpu" id="cpu" onclick="Test(this)">
 <datalist id="lstcpu"></datalist>
-
-<p>GPU:</p>
-<input list="lstgpu" id="gpu" onclick="Test(this)">
-<datalist id="lstgpu"></datalist>
-
-<p>RAM:</p>
-<input list="lstram" id="ram" onclick="Test(this)">
-<datalist id="lstram"></datalist>
 <hr />
 
-<button onclick="Check()">Check</button>
+<button onclick="CheckCM()">Check</button>
+

@@ -40,11 +40,14 @@ function Test()
             success: function (data)
             {
                 //$('#result').html(data.PhanQuyen);
-                document.getElementById("menu").children[6].style.display = "none";
-                if (data.PhanQuyen === 'PQ0001')
+                if (data.PhanQuyen === 'PQ0001') {
                     document.location.href = 'http://localhost:50895/Home/Quanly';
-                if (data.PhanQuyen === 'PQ0003')
+                    document.getElementById("menu").children[6].style.display = "none";
+                }
+                if (data.PhanQuyen === 'PQ0003') {
                     document.location.href = 'http://localhost:50895/Home';
+                    document.getElementById("menu").children[6].style.display = "none";
+                }
                 
             },
             //error: function (jqXHR) {
@@ -58,5 +61,8 @@ function Test()
             },
         });
 }
+
+
+
 
 

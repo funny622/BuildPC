@@ -397,7 +397,6 @@ C:\Users\Thien\Documents\GitHub\BuildPC\BuildPC\bin\Microsoft.AI.DependencyColle
 C:\Users\Thien\Documents\GitHub\BuildPC\BuildPC\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Thien\Documents\GitHub\BuildPC\BuildPC\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Thien\Documents\GitHub\BuildPC\BuildPC\bin\Microsoft.AI.Web.xml
-C:\Users\Thien\Documents\GitHub\BuildPC\BuildPC\obj\Debug\BuildPC.csprojResolveAssemblyReference.cache
 C:\Users\Thien\Documents\GitHub\BuildPC\BuildPC\obj\Debug\BuildPC.csproj.CoreCompileInputs.cache
 C:\Users\Thien\Documents\GitHub\BuildPC\BuildPC\obj\Debug\BuildPC.csproj.CopyComplete
 C:\Users\Thien\Documents\GitHub\BuildPC\BuildPC\obj\Debug\BuildPC.dll

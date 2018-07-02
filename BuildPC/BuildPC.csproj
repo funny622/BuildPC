@@ -322,12 +322,23 @@
     <Content Include="Scripts\FunctionBuild1.js" />
     <Content Include="Scripts\FunctionBuild2.js" />
     <Content Include="Scripts\FunctionCheck.js" />
+    <Content Include="Scripts\FunctionCheckCG.js" />
+    <Content Include="Scripts\FunctionCheckCM.js" />
+    <Content Include="Scripts\FunctionCheckGM.js" />
+    <Content Include="Scripts\FunctionCheckRM.js" />
     <Content Include="Scripts\FunctionLogin.js" />
     <Content Include="Scripts\FunctionNangcap.js" />
+    <Content Include="Scripts\FunctionQLCasePC.js" />
+    <Content Include="Scripts\FunctionQLCPU.js" />
+    <Content Include="Scripts\FunctionQLGPU.js" />
+    <Content Include="Scripts\FunctionQLHDD.js" />
+    <Content Include="Scripts\FunctionQLMainboard.js" />
+    <Content Include="Scripts\FunctionQLNguon.js" />
     <Content Include="Scripts\FunctionQuanly.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\RankingList.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Web.config" />
@@ -351,6 +362,17 @@
     <Content Include="Views\Home\Nangcap.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Check.cshtml" />
+    <Content Include="Views\Home\Ranking.cshtml" />
+    <Content Include="Views\Home\CheckRM.cshtml" />
+    <Content Include="Views\Home\CheckCM.cshtml" />
+    <Content Include="Views\Home\CheckGM.cshtml" />
+    <Content Include="Views\Home\CheckCG.cshtml" />
+    <Content Include="Views\Home\QLCasePC.cshtml" />
+    <Content Include="Views\Home\QLCPU.cshtml" />
+    <Content Include="Views\Home\QLGPU.cshtml" />
+    <Content Include="Views\Home\QLHDD.cshtml" />
+    <Content Include="Views\Home\QLMainboard.cshtml" />
+    <Content Include="Views\Home\QLNguon.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -10,7 +10,7 @@ $(document).ready(function ()
             rowscpu += '<option data-id="' + val.MaCPU + '" value ="' + val.Model + '"></option>';
         });
 
-        $('#cpu').html(rowscpu);
+        $('#lstcpu').html(rowscpu);
 
     });
 
@@ -20,7 +20,7 @@ $(document).ready(function ()
             rowsgpu += '<option value="' + val.Model + '" data-id="' + val.MaGPU + '"></option>';
         });
 
-        $('#gpu').html(rowsgpu);
+        $('#lstgpu').html(rowsgpu);
 
     });
 
@@ -29,7 +29,7 @@ $(document).ready(function ()
             rowsmain += '<option value="' + val.Model + '" data-id="' + val.MaMain + '"></option>';
         });
 
-        $('#main').html(rowsmain);
+        $('#lstmain').html(rowsmain);
 
     });
 
@@ -38,7 +38,7 @@ $(document).ready(function ()
             rowsram += '<option value="' + val.Model + '" data-id="' + val.MaRam + '"></option>';
         });
 
-        $('#ram').html(rowsram);
+        $('#lstram').html(rowsram);
 
     });
 
@@ -84,10 +84,10 @@ function GetData(ListID, nhucau) {
 }
 
 function Update() {
-    var magpu = $("#gpu option[value='" + $('#lstgpu').val() + "']").attr('data-id');
-    var maram = $("#ram option[value='" + $('#lstram').val() + "']").attr('data-id');
-    var macpu = $("#cpu option[value='" + $('#lstcpu').val() + "']").attr('data-id');
-    var mamain = $("#main option[value='" + $('#lstmain').val() + "']").attr('data-id');
+    var magpu = $("#lstgpu option[value='" + $('#gpu').val() + "']").attr('data-id');
+    var maram = $("#lstram option[value='" + $('#ram').val() + "']").attr('data-id');
+    var macpu = $("#lstcpu option[value='" + $('#cpu').val() + "']").attr('data-id');
+    var mamain = $("#lstmain option[value='" + $('#main').val() + "']").attr('data-id');
 
     var radio = document.getElementsByName("nhucau");
     var radiovalue = '';
@@ -102,7 +102,7 @@ function Update() {
     var Giatien = document.getElementById("Giatien").value;
     Giatien = Giatien.replace(/,/g, '');
     if (Giatien === "")
-        alert("Ban chua nhap so tien");
+        alert("Bạn chưa nhập số tiền");
     var CH = {
         "MaGPU": magpu,
         "MaCPU": macpu,
@@ -115,7 +115,7 @@ function Update() {
         "MaNguon": "",
     };
 
-    if (document.getElementById('lstgpu').value === "" || document.getElementById('lstram').value === "" || document.getElementById('lstcpu').value === "" || document.getElementById('lstmain').value === "") {
+    if (document.getElementById('gpu').value === "" || document.getElementById('ram').value === "" || document.getElementById('cpu').value === "" || document.getElementById('main').value === "") {
         alert("Vui lòng chọn đầy đủ bộ phận.")
     }
     else
@@ -134,7 +134,7 @@ function Update() {
                     if (data === "") {
                         $('#title').html('');
                         $('#result').html('');
-                        alert("So tien khong du de nang cap bo phan nay!");
+                        alert("Số tiền không đủ để nâng cấp bộ phận này!");
                     }
                     else {
                         if (document.querySelector('input[name="nhucau"]:checked').value === "RAM") {
@@ -193,7 +193,7 @@ function Update() {
                         //$.each(data, function (key, val) {
                         //    alert(val);
                         //});
-                        rowstitle = "<h4>Cac bo phan " + document.querySelector('input[name="nhucau"]:checked').value + " ban co the nang cap voi so tien nay la:</h4>";
+                        rowstitle = "<h4>Các bộ phận " + document.querySelector('input[name="nhucau"]:checked').value + " bạn có thể nâng cấp với số tiền này là:</h4>";
                         $('#title').html(rowstitle);
                         $('#disresult').css({ "visibility": "visible" });
                     }
